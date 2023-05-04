@@ -1,0 +1,32 @@
+.main-container {
+  color: black;
+  display: block;
+  min-height: 90vh;
+  padding-top: 3rem;
+  width: 100%;
+}
+
+.beast-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.horned-beast p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  max-width: 300px;
+}
+
+.horned-beast img {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  border: 1.5px solid black;
+}
+
+.heartbtn {
+  display: inline-block;
+}

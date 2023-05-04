@@ -1,0 +1,10 @@
+.App {
+  background-color: wheat;
+  border: 2px solid black;
+  margin: auto;
+  max-width: 1280px;
+}
+
+body {
+  background-color: whitesmoke;
+}
