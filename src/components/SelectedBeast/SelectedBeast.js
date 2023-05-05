@@ -1,10 +1,9 @@
-export default function SelectedBeast({ beastModal, handleModal }) {
+export default function SelectedBeast({ modalData, handleModal }) {
   return (
-    <div className="modal">
-      <h2>{beastModal.title}</h2>
-      <img src={beastModal.imageUrl} alt="The Beast" />
-      <p>{beastModal.description}</p>
-      <p onClick={handleModal}>X</p>
+    <div className="modal" onClick={() => handleModal({})}>
+      <h2>{modalData.title}</h2>
+      <img src={modalData.image_url} alt="beastimg" />
+      <p>{modalData.description}</p>
     </div>
   );
 }

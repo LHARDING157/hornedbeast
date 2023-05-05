@@ -1,8 +1,7 @@
 import { useState } from "react";
-import handleModal from "../../App";
 
-export default function HornedBeast(props) {
-  const [votes, setVotes] = useState(1);
+function HornedBeast({ beast, handleModal }) {
+  const [votes, setVotes] = useState(0);
 
   function handleClick() {
     setVotes(votes + 1);
@@ -17,16 +16,22 @@ export default function HornedBeast(props) {
 
   return (
     <div className="horned-beast">
-      <h2>{props.title}</h2>
-      <img onClick={handleModal} src={props.imageUrl} alt={props.title} />
-      <p>{props.description}</p>
-      <p>Horns: {props.horns}</p>
+      <h2>{beast.title}</h2>
+      <img
+        src={beast.image_url}
+        alt={beast.title}
+        onClick={() => handleModal(beast)}
+      />
+      <p>Horns: {beast.horns}</p>
+      <p>{beast.description}</p>
       <p class="heartbtn" onClick={handleClick}>
-        ❤️: {votes}
+        ❤️ {votes}
       </p>
       <p class="heartbtn" onClick={handleClickDown}>
-        :💚
+        💙
       </p>
     </div>
   );
 }
+
+export default HornedBeast;
